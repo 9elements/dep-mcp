@@ -1,16 +1,16 @@
-# fly.toml app configuration file generated for hex-mcp on 2025-02-18T22:40:55+01:00
+# fly.toml app configuration file generated for dep-mcp on 2025-02-20T11:56:06+01:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'hex-mcp'
+app = 'dep-mcp'
 primary_region = 'arn'
 kill_signal = 'SIGTERM'
 
 [build]
 
 [env]
-  PHX_HOST = 'hex-mcp.9elements.com'
+  PHX_HOST = 'dep-mcp.fly.dev'
   PORT = '8080'
 
 [http_service]

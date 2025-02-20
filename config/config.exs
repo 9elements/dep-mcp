@@ -13,7 +13,12 @@ config :hex_mcp,
 # Configures the endpoint
 config :hex_mcp, HexMcpWeb.Endpoint,
   url: [host: "localhost"],
-  check_origin: ["https://hex-mcp.9elements.com", "https://hex-mcp.fly.dev"],
+  check_origin: [
+    "https://dep-mcp.9elements.com",
+    "https://dep-mcp.fly.dev",
+    "https://hex-mcp.9elements.com",
+    "https://hex-mcp.fly.dev"
+  ],
   adapter: Bandit.PhoenixAdapter,
   render_errors: [
     formats: [html: HexMcpWeb.ErrorHTML, json: HexMcpWeb.ErrorJSON],

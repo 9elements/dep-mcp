@@ -21,23 +21,78 @@
       <div class="absolute inset-0 bg-gradient-to-b from-transparent via-gray-50/80 to-gray-50">
       </div>
     </div>
-
+    
 <!-- Content -->
     <div class="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
       <div class="text-center">
         <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
           <span class="block">MCP Server for</span>
-          <span class="block text-indigo-600">Hex Package Versions</span>
+          <span class="block text-indigo-600">Package Versions</span>
         </h1>
         <p class="mx-auto mt-3 max-w-md text-base text-gray-500 sm:text-lg md:mt-5 md:max-w-3xl md:text-xl">
-          Help AI tools like Cursor to automatically use the correct package versions when adding them to your Elixir projects.
+          Help AI tools like Cursor to automatically use the correct package versions when adding dependencies to your projects.
         </p>
       </div>
 
       <div class="mt-16">
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
           <div class="space-y-8">
-            <!-- What is MCP -->
+            <!-- Supported Package Managers -->
+            <div class="rounded-lg bg-white p-6 shadow-lg">
+              <h2 class="text-2xl font-semibold text-gray-900">Supported Package Managers</h2>
+              <div class="mt-4 space-y-3">
+                <div class="flex items-center">
+                  <div class="w-8 h-8 flex items-center justify-center bg-purple-100 rounded-md">
+                    <.icon name="hero-circle-stack" class="text-purple-600" />
+                  </div>
+                  <a
+                    href="https://hex.pm"
+                    target="_blank"
+                    class="ml-3 text-gray-600 hover:text-indigo-600 hover:underline"
+                  >
+                    Hex packages for Elixir projects
+                  </a>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-8 h-8 flex items-center justify-center bg-red-100 rounded-md">
+                    <.icon name="hero-circle-stack" class="text-red-600" />
+                  </div>
+                  <a
+                    href="https://rubygems.org"
+                    target="_blank"
+                    class="ml-3 text-gray-600 hover:text-indigo-600 hover:underline"
+                  >
+                    Ruby Gems for Ruby projects
+                  </a>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-md">
+                    <.icon name="hero-circle-stack" class="text-blue-600" />
+                  </div>
+                  <a
+                    href="https://pypi.org"
+                    target="_blank"
+                    class="ml-3 text-gray-600 hover:text-indigo-600 hover:underline"
+                  >
+                    PyPI packages for Python projects
+                  </a>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-8 h-8 flex items-center justify-center bg-yellow-100 rounded-md">
+                    <.icon name="hero-circle-stack" class="text-yellow-600" />
+                  </div>
+                  <a
+                    href="https://www.npmjs.com"
+                    target="_blank"
+                    class="ml-3 text-gray-600 hover:text-indigo-600 hover:underline"
+                  >
+                    NPM packages for JavaScript projects
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+<!-- What is MCP -->
             <div class="rounded-lg bg-white p-6 shadow-lg">
               <h2 class="text-2xl font-semibold text-gray-900">What is MCP</h2>
               <p class="mt-4 text-gray-600">
@@ -59,7 +114,7 @@
                 </svg>
               </a>
             </div>
-
+            
 <!-- How to Use -->
             <div class="rounded-lg bg-white p-6 shadow-lg">
               <h2 class="text-2xl font-semibold text-gray-900">Add to Cursor</h2>
@@ -81,7 +136,7 @@
                 </svg>
               </a>
             </div>
-
+            
 <!-- Server URL -->
             <div class="rounded-lg bg-white p-6 shadow-lg">
               <h2 class="text-2xl font-semibold text-gray-900">Server URL</h2>
@@ -90,9 +145,9 @@
               </p>
               <div class="mt-4">
                 <div class="rounded-md bg-gray-50 p-4">
-                  <code class="text-sm text-gray-700">https://hex-mcp.9elements.com/sse</code>
+                  <code class="text-sm text-gray-700">https://dep-mcp.9elements.com/sse</code>
                   <button
-                    onclick="navigator.clipboard.writeText('https://hex-mcp.9elements.com/sse')"
+                    onclick="navigator.clipboard.writeText('https://dep-mcp.9elements.com/sse')"
                     class="ml-2 inline-flex items-center rounded-md border border-gray-300 bg-white px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
                   >
                     Copy
@@ -100,16 +155,16 @@
                 </div>
               </div>
             </div>
-
+            
 <!-- Disclaimer -->
             <div class="rounded-lg bg-white p-6 shadow-lg">
               <h2 class="text-2xl font-semibold text-gray-900">Disclaimer</h2>
               <p class="mt-4 text-gray-600">
-                While this service uses the API provided by hex.pm, we are not affiliated with or endorsed by hex.pm. The service is provided as-is without any warranty. Use at your own discretion.
+                While this service uses the official APIs provided by the respective package registries, we are not affiliated with or endorsed by any of them. The service is provided as-is without any warranty. Use at your own discretion.
               </p>
             </div>
           </div>
-
+          
 <!-- Screenshot -->
           <div class="flex items-center justify-center">
             <div class="overflow-hidden rounded-lg shadow-lg max-w-lg">
@@ -124,7 +179,7 @@
       </div>
     </div>
   </div>
-
+  
 <!-- Footer -->
   <footer class="bg-white mt-16">
     <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
@@ -140,7 +195,7 @@
           </a>
         </span>
         <a
-          href="https://github.com/9elements/hex-mcp"
+          href="https://github.com/9elements/dep-mcp"
           target="_blank"
           class="w-full sm:w-auto hover:underline"
         >
